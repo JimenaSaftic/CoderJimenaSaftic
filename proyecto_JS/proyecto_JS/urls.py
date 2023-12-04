@@ -20,7 +20,7 @@ from proyecto_JS.views import bienvenida
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path ('', bienvenida, name="bienvenida"),
+    path('', bienvenida , name="bienvenida"),
 ]
 
-path('catalogo/', include ('catalogo.urls'))
+path('catalogo/',include('catalogo.urls'))

@@ -16,6 +16,4 @@ def crear_producto(request):
         nuevo_producto.save()
         return render(request, "index.html")
     
-    return render(request, 'producto_formulario.html')from django.shortcuts import render
-
-# Create your views here.
+    return render(request, 'producto_formulario.html')
