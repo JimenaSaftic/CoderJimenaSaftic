@@ -17,3 +17,4 @@ def crear_producto(request):
         return render(request, "index.html")
     
     return render(request, 'producto_formulario.html')
+

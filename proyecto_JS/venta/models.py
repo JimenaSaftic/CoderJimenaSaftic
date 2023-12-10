@@ -14,7 +14,6 @@ class Venta(models.Model):
     nro_factura = models.IntegerField()
     producto = models.CharField(max_length=100)
     cantidad = models.IntegerField()
-    fecha_de_venta = models.DateField()
     
     def __str__(self):
-        return "Venta nro: " + str(self.nro_factura)
+        return "factura nro: " + str(self.nro_factura)

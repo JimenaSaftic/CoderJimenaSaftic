@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block contenido %}
+<br>
+
+<form action='/venta/crear_venta/' method="post">
+    {% csrf_token %}
+    <p> cliente: <input type = "text" name="nombre">
+    <p> nro_factura: <input type = "number" name="nro_factura">
+    <p> producto: <input type = "text" name="producto">
+    <p> cantidad: <input type = "number" name="cantidad">
+    <br>
+    <input type = "submit" value="Enviar">
+ </form>
+
+{% endblock %}

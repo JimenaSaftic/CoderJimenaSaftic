@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block contenido %}
+<br>
+
+<form action='/venta/crear_cliente/' method="post">
+    {% csrf_token %}
+    <p> Nombre_apellido: <input type = "text" name="nombre">
+    <p> nro_cuit: <input type = "text" name="nro_cuit">
+    <p> email: <input type = "text" name="email">
+    <br>
+    <input type = "submit" value="Enviar">
+ </form>
+
+{% endblock %}
