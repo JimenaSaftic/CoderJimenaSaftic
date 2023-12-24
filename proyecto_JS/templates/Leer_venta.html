@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block contenido %}
+
+
+{% for venta in Lista_venta %}
+
+<li>Venta:{{venta.cliente}},producto: {{venta.producto}}</li>
+
+{% endfor %}
+{% endblock %}

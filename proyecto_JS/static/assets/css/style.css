@@ -70,7 +70,7 @@ h6 {
 # Header
 --------------------------------------------------------------*/
 #header {
-  background: white;
+  background: rgb(255, 252, 252);
   transition: all 0.5s;
   z-index: 997;
   padding: 20px 0;
@@ -530,7 +530,7 @@ section {
 
 .section-bg,
 .services .icon-box {
-  background-color: #f8f9fa;
+  background-color: #f1f6fc;
 }
 
 .section-title {
@@ -554,7 +554,7 @@ section {
   width: 120px;
   height: 1px;
   display: inline-block;
-  background: #e6636a;
+  background: #080808;
   margin: 4px 10px;
 }
 
@@ -565,7 +565,7 @@ section {
   font-weight: 700;
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
-  color: #556270;
+  color: #090a0a;
 }
 
 /*--------------------------------------------------------------
@@ -600,7 +600,7 @@ section {
 .breadcrumbs ol li+li::before {
   display: inline-block;
   padding-right: 10px;
-  color: #6b7b8d;
+  color: #09090a;
   content: "/";
 }
 

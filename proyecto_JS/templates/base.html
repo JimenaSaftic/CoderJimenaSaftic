@@ -53,9 +53,12 @@
         <ul>
           <li><a href="/" class="active">Inicio</a></li>
           <li><a href="/catalogo/crear_producto">Productos</a></li>
+          <li><a href="/catalogo/busqueda_bd">Busqueda en Base de Datos</a></li>
           <li><a href="/venta/crear_cliente">Clientes</a></li>
+          <li><a href="/venta/BD_Cliente">BD_Clientes</a></li>
           <li><a href="/venta/crear_venta">Ventas</a></li>
-         
+          <li><a href="/venta/Lista_venta">Lista Ventas</a></li>
+          
 
           <li><a href="contact.html">Contact</a></li>
           <li><a href="index.html" class="getstarted">Get Started</a></li>
@@ -101,24 +104,25 @@
           </div>
 
           <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Useful Links</h4>
+            <h4>Menu usuarios</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+              {% if not request.user.is_authenticated %}
+              <li><i class="bx bx-chevron-right"></i> <a href="/usuarios/registro">Registrar Usuario</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/usuarios/login">Login</a></li>
+              {% else %}
+              <li><i class="bx bx-chevron-right"></i> <a href="/usuarios/logout">Logout</a></li>
+              {% endif %}
+              <li><i class="bx bx-chevron-right"></i> <a href="/usuarios/crear_perfil">Crear Perfil de Usuario</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/usuarios/perfil_usuario">Ver Perfil de Usuario</a></li>
             </ul>
           </div>
 
           <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Services</h4>
+            <h4>Otros servicios</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Nuestra historia</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Trabaja con nosotros</a></li>
             </ul>
           </div>
 
@@ -126,7 +130,7 @@
             <h4>Our Newsletter</h4>
             <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
             <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
+              <input type="email" name="email"><input type="submit" value="Suscribirse">
             </form>
 
           </div>

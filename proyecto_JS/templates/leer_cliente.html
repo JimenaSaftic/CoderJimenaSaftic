@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block contenido %}
+
+
+{% for cliente in BD_Cliente %}
+
+<li>Cliente:{{cliente.nombre_apellido}},Email: {{cliente.email}}</li>
+<button>
+    <a href= "{% url 'eliminar_cliente' cliente.nombre_apellido %}"> Eliminar</a>
+</button>
+</button>
+    <a href="{% url 'editar_cliente' cliente.nombre_apellido %}"> Editar</a>
+</button>
+
+{% endfor %}
+{% endblock %}
